@@ -8,7 +8,7 @@ def main():
     for url in urls:
         args = ['scorecard', '--repo', url, '--format', 'json']
         result = subprocess.run(args, capture_output=True, text=True)
-        create_markdown(json.loads(result))
+        create_markdown(json.loads(result.stdout))
 
 def create_markdown(jsonfile):
     checks = []
