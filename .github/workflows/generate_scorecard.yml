@@ -22,4 +22,13 @@ jobs:
       - name: Install Scorecard
         run: |
           go install github.com/ossf/scorecard/v5@latest
-          scorecard version
+      - name: Create Reports
+        run: |
+          python generate_scorecard.py
+      - name: Commit and Push Changes
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+          git add .
+          git commit -m "Updating the markdown files"
+          git push
