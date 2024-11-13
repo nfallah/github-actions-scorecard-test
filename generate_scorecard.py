@@ -26,7 +26,7 @@ def create_markdown(jsonfile):
         scorecard_score = jsonfile['score'],
         scorecard_rows = checks_md
     )
-    elements = check['repo']['name'].split('/')
+    elements = jsonfile['repo']['name'].split('/')
     name = elements[2]
     owner = elements[1]
     with open(f'{owner}_{name}.md', 'w') as file:
