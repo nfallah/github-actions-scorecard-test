@@ -1,8 +1,10 @@
 import subprocess
 import json
 from scorecard_template import MARKDOWN_TEMPLATE
+import os
 
 def main():
+    os.makedirs("REPORTS", exist_ok=True)
     with open('config.txt', 'r') as file:
         urls = file.read().splitlines()
     for url in urls:
@@ -29,7 +31,7 @@ def create_markdown(jsonfile):
     elements = jsonfile['repo']['name'].split('/')
     name = elements[2]
     owner = elements[1]
-    with open(f'{owner}_{name}.md', 'w') as file:
+    with open(f'REPORTS/{owner}_{name}.md', 'w') as file:
         file.write(markdown_data)
 
 if __name__ == "__main__":
