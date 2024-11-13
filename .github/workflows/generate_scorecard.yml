@@ -9,7 +9,7 @@ jobs:
   generate-scorecard:
     runs-on: ubuntu-latest
     env:
-      GH_ACCESS_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
     steps:
       - uses: actions/checkout@v4
