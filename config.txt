@@ -1,2 +1,3 @@
 https://github.com/githubtraining/hellogitworld
 https://github.com/Call-for-Code/Project-Sample
+https://github.com/NoodleTaco/StockKafkaPyApp
