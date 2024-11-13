@@ -1,3 +1,2 @@
-https://github.com/fsprojects/fantomas
-https://github.com/G-Research/unicorn-history-server
-https://github.com/NoodleTaco/StockKafkaPyApp
+https://github.com/githubtraining/hellogitworld
+https://github.com/Call-for-Code/Project-Sample
