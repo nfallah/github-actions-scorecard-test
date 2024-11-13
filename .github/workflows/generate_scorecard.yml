@@ -22,4 +22,4 @@ jobs:
       - name: Install Scorecard
         run: |
           go install github.com/ossf/scorecard/v5@latest
-          scorecard --version
+          scorecard version
