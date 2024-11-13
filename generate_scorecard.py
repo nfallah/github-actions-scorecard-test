@@ -16,7 +16,7 @@ def create_markdown(jsonfile):
         score = check['score']
         if score < 0: score = '*N/A*'
         name = f'[{check['name']}]({check['documentation']['url']})'
-        assessment = '*N/A*' if score == '*N/A*' else (1 if score <= 3.3 else 2 if score <= 6.6 else 3 if score <= 9.9 else 10)
+        assessment = '*N/A*' if score == '*N/A*' else (1 if score <= 3.3 else 2 if score <= 6.6 else 3 if score <= 9.9 else 4)
         notes = check['reason']
         checks.append(f'|{score}|{name}|{assessment}|{notes}|')
     checks_md = '\n'.join(checks)
